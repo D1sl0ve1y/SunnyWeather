@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"    >
+    <!-- 1.Logo区域：展示半开屏⼴广告时使⽤用，如果想展示全开屏⼴广告，可以不不需要这个Logo区域 -->
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/adslogo" />
+    <!-- 2.预设开屏图⽚片区域： -->    <!-- 开发者可以把⾃自家App设计开屏图⽚片摆放在这⾥里里，本示例例中放置了了⼀一张静态图⽚片。!-->    <!-- 注意1：直接将此图放在⼴广告容器器的下⾯面即可，不不要将⼴广告容器器splash_container的设为invisi ble-->
+    <ImageView
+        android:id="@+id/splash_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:layout_above="@id/app_logo"
+        android:src="@drawable/adslogo" />
+    <!-- 3.开屏⼴广告容器器区域：-->    <!-- 注意：该区域⾼高度不不得⼩小于400dp。在本示例例中没有写死splash_container的⾼高度值，是因为第1 部分的app_logo区域是⼀一个⾼高度很⼩小的图⽚片。 -->    <!-- ⽬目前装载开屏⼴广告的容器器布局⽀支持FrameLayout/Linealayout/RelativeLayout/Constrain tLayout-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/splash_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/app_logo"
+        /></RelativeLayout>

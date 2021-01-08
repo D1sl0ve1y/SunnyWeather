@@ -24,7 +24,7 @@
                 android:orientation="vertical">
 
                 <include layout="@layout/now" />
-
+                <include layout="@layout/activity_union_splash_a_d"/>
                 <include layout="@layout/forecast" />
 
                 <include layout="@layout/life_index" />
